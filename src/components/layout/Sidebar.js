@@ -4,8 +4,13 @@ import { NavLink } from 'react-router-dom';
 const Sidebar = () => {
 
     const links = [
+        {name: "Recursive", url: '/color/Yellow/ffff00'},
+        {name: "Smart Color", url: '/color/Green/00ff00'},
+        {name: "Color", url: '/color'},
         {name: "Prompt", url: '/prompt'},
         {name: "Prop View", url: '/props'},
+        {name: "Logging", url: '/logging'},
+        {name: "Private", url: '/private'},
         {name: "Not Found", url: '/foo'},
     ];
 
