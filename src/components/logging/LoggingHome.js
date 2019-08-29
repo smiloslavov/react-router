@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import LoggingDefaultMessage from './LoggingDefaultMessage';
 import LoggingLink from './LoggingLink';
 import LoggingRoute from './LoggingRoute';

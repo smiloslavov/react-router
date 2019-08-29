@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/layout/Header';
 import Sidebar from './components/layout/Sidebar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Home from './components/Home';
 import NameForm from './components/prompt/NameForm';
 import PropViewer from './components/PropViewer';
@@ -14,6 +14,7 @@ import Login from './components/secure/Login';
 import Logout from './components/secure/Logout';
 import SmartColorSwatch from './components/color/SmartColorSwatch';
 import RecursiveColorSwatch from './components/color/RecursiveColorSwatch';
+import Unicorn from './components/Unicorn';
 
 const App = () => {
 
@@ -26,6 +27,8 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact />
+                        <Route path={'/unicorn'} component={Unicorn} />
+                        <Redirect to='/unicorn' from='/pets' />
                         <Route path='/color/:text/:color' component={RecursiveColorSwatch} />
                         <Route path='/color/:text/:color' component={SmartColorSwatch} exact />
                         <Route path='/color' render = { () => {

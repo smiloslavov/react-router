@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Sidebar = () => {
 
@@ -43,6 +43,9 @@ const Sidebar = () => {
                 </li>
                 {linkComponents}
             </ul>
+            <Link to='/pets'>
+                <img src='/assets/unicorn.png' width={100} />
+            </Link>
         </div>
     );
 };
